@@ -1,0 +1,13 @@
+{
+    "name": "jordi/php",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jordi Catalina",
+            "email": "jordicatalina2001@gmail.com"
+        }
+    ],
+    "require": {
+        "filp/whoops": "^2.14"
+    }
+}
