@@ -15,7 +15,7 @@
 
 </header>
 
-<form  method="POST" action="formularis.php">
+<form  method="POST" action="../public/formularis.php">
     Operador numero 1: <input type="number" name="operador1"><br>
     Operador numero 2: <input type="number" name="operador2"><br>
     Operador:

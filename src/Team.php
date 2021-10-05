@@ -20,11 +20,12 @@ class Team{
         $this->ScoreGoals = $ScoreGoals;
         $this->ConcededGoals = $ConcededGoals;
     }
-    public function Render(){
-        return $this->name." ".$this->players." ".$this->matches." ".$this->won." "
-            .$this->lost." ".$this->tie." ".$this->ScoreGoals." ".$this->ConcededGoals;
+    public function render(){
+        $lista = $this->players;
+        require ("../vistas/equipo.view.php");
+
     }
-    public function SignPlayer($player){
+    public function SignPlayer(Member $player){
         $this->players[] = $player;
     }
 

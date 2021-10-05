@@ -26,4 +26,4 @@ function ordenar($arrayAOrdenar,$fila, $orden = SORT_ASC){
     array_multisort($arrAux, $orden, $arrayAOrdenar);
 }
 
-require_once("fitxers.view.php");
+loadView("fitxers",compact("lista"));

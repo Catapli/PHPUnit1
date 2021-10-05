@@ -1,10 +1,14 @@
 <?php
+require_once ("../kernel.php");
 use App\Player;
 use App\Team;
+use App\Trainer;
 $arxiu = fopen("plantilla.csv","r");
-$lista[] = [];
+$lista = [];
 $team = new Team("Atlético de Madrid");
 
+$trainer = new Trainer("Boss","Manuelcito","21/08/2020","Spain",5,4);
+$team->SignPlayer($trainer);
 while (($data = fgetcsv($arxiu)) == true) {
     if (filtrarPorEquipo($data[1])){
         $jugador = createPlayer($data);
@@ -12,15 +16,13 @@ while (($data = fgetcsv($arxiu)) == true) {
         array_push($lista,$jugador);
     }
 }
+
 fclose($arxiu);
 unset($lista[0]);
 
 function filtrarPorEquipo($equipo){
     return $equipo == "Atlético de Madrid";
 }
-
-
-
 
 function createPlayer($data){
     $name = $data[4];
@@ -35,9 +37,4 @@ function createPlayer($data){
     $minutes = $data[16];
     return new Player($name,$birthday,$pais,$dorsal,$posicion,$goles,$matches,$minutes,$yellow,$red);
 }
-
-
-
-
-
-require_once("fitxers.view.php");
+loadView("fitxers",compact("team"));

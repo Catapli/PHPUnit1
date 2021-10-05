@@ -15,7 +15,7 @@
 
 </header>
 
-<form  method="POST" action="form_persona.php" >
+<form  method="POST" action="../public/form_persona.php" >
     Nom: <input type="text" required name="nombre"><br>
     Data naixement : <input type="date" > <br>
     Sexe:<br> <input type="checkbox" id="opcion1" name="hombre" value="hombre">

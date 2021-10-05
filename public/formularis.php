@@ -9,7 +9,7 @@ if (isPost() && cfsr()){
     $resultado = calcular($X, $Y, $funcion);
 
 }else{
-    require("formularis.view.php");
+    loadView("formularis",compact("errors"));
 }
 if (!count($errors)){
     require_once("formularis.view.php");
