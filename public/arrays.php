@@ -1,6 +1,7 @@
 <?php
 require_once ("../vistas/arrays.view.php");
 
+
 function contarElementos($array){
     return count($array);
 }

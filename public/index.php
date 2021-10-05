@@ -7,7 +7,6 @@ $features = [
     'glasses' => false,
     'profession' => 'student'
 ];
-$features['team'] = '2DAW';
 
-require_once("fitxers.php");
+require_once("plantilla.php");
 
