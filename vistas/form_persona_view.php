@@ -15,20 +15,24 @@
 
 </header>
 
-<form  method="POST" action="../public/form_persona.php" >
-    Nom: <input type="text" required name="nombre"><br>
-    Data naixement : <input type="date" > <br>
-    Sexe:<br> <input type="checkbox" id="opcion1" name="hombre" value="hombre">
+<form  method="POST" action="conexiónBD.php" ><br>
+    DNI: <input type="text" required name="dni"><br>
+    Nom: <input type="text" required name="nom"><br>
+    Data naixement : <input type="date" name="dataNaixement" > <br>
+    Sexe:<br>
+    <input type="checkbox" id="opcion1" name="sexe" value="1">
     <label for="opcion1"> Hombre</label><br>
-    <input type="checkbox" id="opcion2" name="mujer" value="mujer">
+    <input type="checkbox" id="opcion2" name="sexe" value="2">
     <label for="opcion2">Mujer</label><br>
-    <input type="checkbox" id="opcion3" name="hombre" value="otro">
+    <input type="checkbox" id="opcion3" name="sexe" value="3">
     <label for="opcion3"> Otro..</label><br>
-    <select id="hobbies" name="hobbies">
+    <select id="hobbies" name="hobby">
         <?php
         $hobbies = array('Pescar', 'Escalar', 'Correr','Pasear','Videojuegos');
+        $i = 0;
         foreach ($hobbies as $hobby){
-        ?> <option value=<?=$hobby?>><?=$hobby?></option>
+            $i++;
+        ?> <option value=<?=$i?>><?=$hobby?></option>
         <?php }?>
     </select><br>
 
