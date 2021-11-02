@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 require(dirname(__FILE__) . "/vendor/autoload.php");
 
 use Whoops\Run;

@@ -15,14 +15,7 @@ if (!count($errors)){
     require_once("formularis.view.php");
 }
 
-function isRequired($nomCamp, $errors){
-    if (!empty($_POST[$nomCamp])){
-        return trim(htmlspecialchars($_POST[$nomCamp]));
-    }else{
-        $errors[] = "El $nomCamp es necesario";
-        return null;
-    }
-}
+
 
 function isPost(){
     return $_SERVER['REQUEST_METHOD'] === 'POST';

@@ -6,7 +6,7 @@ use PDO;
 
 
 
-$conn = \App\Connection::make("test");
+$conn = \App\Connection::make();
 
 $query = new QueryBuilder($conn);
 $pdoST = $query->selectAll("alumnes");
